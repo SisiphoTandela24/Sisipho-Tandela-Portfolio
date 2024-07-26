@@ -1,0 +1,13 @@
+class TerminalScribe:
+    def drawSquare(self, size):
+        for _ in range(size):
+            print('* ' * size)
+
+# Example usage:
+# Create an instance of TerminalScribe
+scribe = TerminalScribe()
+
+# Call the drawSquare function with a size of 5
+scribe.drawSquare(5)
+
+

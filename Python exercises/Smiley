@@ -1,0 +1,29 @@
+
+Copy code
+def encodeString(stringVal):
+    encodedList = []
+    prevChar = stringVal[0]
+    count = 1
+    for char in stringVal[1:]:  # Start from the second character
+        if prevChar == char:
+            count += 1
+        else:
+            encodedList.append((prevChar, count))
+            prevChar = char
+            count = 1
+
+    encodedList.append((prevChar, count))
+    return encodedList
+
+def decodeString(encodedList):
+    decodedStr = ""
+    for item in encodedList:
+        decodedStr += item[0] * item[1]
+    return decodedStr
+
+# Example usage
+encoded = encodeString("AAABBBCCCDD")
+print(encoded)  # Output: [('A', 3), ('B', 3), ('C', 3), ('D', 2)]
+
+decoded = decodeString(encoded)
+print(decoded)  # Output: AAABBBCCCDD

@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sisipho Tandela's Personal Portfolio - Software Developer from Cape Town">
+    <meta name="keywords" content="Sisipho Tandela, Software Developer, Cape Town, Web Design, App Design">
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/2a5cf7be5b.js" crossorigin="anonymous"></script>
@@ -14,21 +16,22 @@
         <div class="container">
             <nav>
                 <ul>
-                    <li><a href="#About">About</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
             <div class="header-text">
-                <p>Software Developer</p>
+                <p onkeydown="handleKeyDown(event)">Software Developer Candidate</p>
                 <h1>Hi, I'm <span>Sisipho</span><br>Tandela from Cape Town</h1>
             </div>
         </div>
     </div>
 
     <!-- About Section -->
-    <div id="About">
+    <div id="about">
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
@@ -36,25 +39,30 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>I am Sisipho Tandela, a software developer. I am ambitious and driven. I thrive on challenges and constantly set goals for myself, so I have something to strive towards. I am not comfortable with settling, and I am always looking for an opportunity to do better and achieve greatness.</p>
+                        <p>Hello! I'm Sisipho Tandela, a software developer intern passionate about creating innovative solutions. 
+                           I'm currently enrolled on a software developer learnership at Capaciti, aiming to turn my love for technology into impactful software applications.
+                           I pride Myself as being very disciplined, hardworking individual who grabs every opportunity I get in life with both hands.   
+                           I am very reliable, eager to learn, passionate and work well under pressure. 
+                           I easly adapt to change and adjustments, as it is an opportunity to learn and improve my skills, thus increasing my knowledge.</p>
+                        
+
+
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                        <p class="tab-links active-link" onclick="opentab(event, 'Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab(event, 'Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab(event, 'Education')">Education</p>
                     </div>
                     <div class="tab-contents active-tab" id="Skills">
                         <ul>
-                            <li><span>Programming Languages</span><br>Python, JavaScript</li>
-                            <li><span>Web Development</span><br>HTML, CSS, JavaScript, Node.js, React</li>
+                            <li><span>Web Development</span><br>HTML, CSS</li>
                             <li><span>Soft Skills</span><br>Communication, Teamwork</li>
-                            <li><span>Development Tools</span><br>IDEs, npm</li>
                             <li><span>Basic Knowledge of Agile Methodologies</span><br>Scrum</li>
                             <li><span>Problem-solving Skills</span></li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="Experience">
                         <ul>
-                            <li><span>Software Developer</span><br>Developing web/app interfaces</li>
+                            
                         </ul>
                     </div>
                     <div class="tab-contents" id="Education">
@@ -78,13 +86,11 @@
                     <i class="fa-solid fa-code"></i>
                     <h2>Web Design</h2>
                     <p>Designing responsive and visually appealing web interfaces.</p>
-                    <a href="#">Learn more</a>
                 </div>
                 <div>
                     <i class="fa-brands fa-app-store"></i>
                     <h2>App Design</h2>
                     <p>Creating user-friendly and functional mobile applications.</p>
-                    <a href="#">Learn more</a>
                 </div>
             </div>
         </div>
@@ -96,42 +102,126 @@
             <h1 class="sub-title">My Work</h1>
             <div class="work-list">
                 <div class="work">
-                    <img src="images/istockphoto-1456193345-1024x1024.jpg" alt="Work Sample">
+                    <img src="images/software-dev-1.jpg" alt="Work Sample">
                     <div class="layer">
                         <h3>Project Title</h3>
                         <p>Description of the project goes here.</p>
-                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                        <a href="Python exercises/Bankapp.py"><i class="fa-solid fa-link">Bankapp</i></a>
                     </div>
                 </div>
-            </div>
-            <a href="#" class="btn">See More</a>
-        </div>
-    </div>
+                <div class="work">
+                    <img src="images/software-dev-2.jpg" alt="Work Sample">
+                    <div class="layer">
+                        <h3>Project Title</h3>
+                        <p>Description of the project goes here.</p>
+                        <a href="Snappy-Splashy-Booking/index.html"><i class="fa-solid fa-link"></i>webpage</a>
+                    </div>
+                </div>
 
-    <!-- Contact Section --> 
-    <div id="contact">
+
+                
+    <!-- Contact Section -->
+    <div id="contact" class="contact-section">
         <div class="container">
             <div class="row">
                 <div class="contact-left">
                     <h1 class="sub-title">Contact Me</h1>
-                    <p>tandelasisipho@gmail.com</p>
-                    <p>0604558451</p>
+                    <p><i class="fa-regular fa-paper-plane"></i> tandelasisipho@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> 0604558451</p>
+
                     <div class="social-icons">
-                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.facebook.com/mengce.tandela" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.github.com/sisiphotandela24" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.instagram.com/mengce243" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/sisipho-tandela-8bb132228/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
                     </div>
+                    <a href="Tandela Sisipho.pdf" class="btn btn2">View My CV</a>
                 </div>
                 <div class="contact-right">
-                    <!-- You can add a contact form here if needed -->
+                    <form name="contact-form" onsubmit="sendEmail(event)">
+                        <input type="text" id="name" name="Name" placeholder="Your Name" required>
+                        <input type="email" id="email" name="Email" placeholder="Your Email" required>
+                        <textarea id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    
                 </div>
             </div>
         </div>
     </div>
+    <div class="copyright">
+        <p>©Sisipho.</p>  
+    </div>
 
-<script src="script.js"></script>
+    <!-- Back to Top Button -->
+    <div id="back-to-top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </div>
+
+    <script type="text/javascript">
+        // Function to handle keydown event
+        function handleKeyDown(event) {
+            if (event.key === 'Enter') {
+                alert('Enter key pressed');
+            }
+        }
+
+        // Function to handle tab switching
+        function opentab(event, tabname) {
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            for (var tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (var tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        // Function to send email via AJAX
+        function sendEmail(event) {
+            event.preventDefault(); // Prevent form submission
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            var xhr = new XMLHttpRequest();
+            var url = 'send_email.php'; 
+            var params = 'name=' + name + '&email=' + email + '&message=' + message;
+
+            xhr.open('POST', url, true);
+            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    alert('Email sent successfully!');
+                } else {
+                    alert('Failed to send email.');
+                }
+            };
+
+            xhr.send(params);
+        }
+
+        // Function to show or hide the Back to Top button
+        window.onscroll = function() {
+            var backToTopButton = document.getElementById("back-to-top");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        // Function to scroll back to the top
+        document.getElementById("back-to-top").onclick = function() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        };
+    </script>
 </body>
 </html>
 

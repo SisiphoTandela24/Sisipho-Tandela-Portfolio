@@ -11,3 +11,14 @@ function opentab(tabname) {
     event.currentTarget.classList.add("active-link");
     document.getElementById(tabname).classList.add("active-tab");
 }
+
+function sendEmail() {
+    emailjs.sendForm("sisipho.tandela@capaciti.org.za", "sisipho.tandela@capaciti.org.za", "#contact-form")
+      .then(function(response) {
+        console.log("Email sent successfully!", response);
+      })
+      .fail(function(error) {
+        console.log("Error sending email:", error);
+      });
+  }
+
